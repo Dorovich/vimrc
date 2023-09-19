@@ -3,6 +3,16 @@
 * Mi configuración de Vim
 Es bastante sencilla.
 
+[[file:vim-git.png]]
+
+** Versión mínima
+Ver el archivo =minirc=. Tiene conveniencias mínimas, para sistemas en los que
+no se tiene muchos recursos.
+
+** Instalación
+Usa cualquier configuración en el archivo =~/.vimrc=, o también en las
+versiones más nuevas en =~/.vim/vimrc=.
+
 ** Paquetes
 - jdhao/better-escape.vim
 - tpope/vim-surround
@@ -25,5 +35,3 @@ Es bastante sencilla.
 - vlime/vlime
 *opcional: glsl*
 - tikhomirov/vim-glsl
-
-[[file:vim-git.png]]
