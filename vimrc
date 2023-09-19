@@ -227,3 +227,5 @@ if usar_paquetes['colores']
 else
 	colorscheme peachpuff
 endif
+
+" vi: ft=vim
