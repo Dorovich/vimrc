@@ -198,11 +198,11 @@ if usar_lenguajes['org']
 	Plug 'jceb/vim-orgmode'
 endif
 if usar_lenguajes['lisp']
+	Plug 'vim-scripts/paredit.vim'
 	Plug 'vlime/vlime', {'rtp': 'vim/'}
 endif
 if usar_lenguajes['glsl']
 	Plug 'tikhomirov/vim-glsl'
-	Plug 'vim-scripts/paredit.vim'
 endif
 call plug#end()
 

@@ -1,0 +1,29 @@
+#+options: \n:t
+
+[[file:vim-git.png]]
+
+* Mi configuración de Vim
+Es bastante sencilla.
+
+** Paquetes
+- jdhao/better-escape.vim
+- tpope/vim-surround
+- tpope/vim-commentary
+*opcional: fuzzy finding*
+- junegunn/fzf
+- junegunn/fzf.vim
+*opcional: colores*
+- srcery-colors/srcery-vim
+- Everblush/everblush.vim
+- rose-pine/vim
+- ap/vim-css-color
+*opcional: experimental*
+- justinmk/vim-sneak
+*opcional: org*
+- tpope/vim-speeddating
+- jceb/vim-orgmode
+*opcional: lisp*
+- vim-scripts/paredit.vim
+- vlime/vlime
+*opcional: glsl*
+- tikhomirov/vim-glsl
