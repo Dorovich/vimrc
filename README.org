@@ -1,7 +1,5 @@
 #+options: \n:t
 
-[[file:vim-git.png]]
-
 * Mi configuración de Vim
 Es bastante sencilla.
 
@@ -27,3 +25,5 @@ Es bastante sencilla.
 - vlime/vlime
 *opcional: glsl*
 - tikhomirov/vim-glsl
+
+[[file:vim-git.png]]

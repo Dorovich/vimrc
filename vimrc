@@ -208,7 +208,6 @@ call plug#end()
 
 " OTROS PLUGINS ÚTILES:
 " YouCompleteMe - motor de compleción
-" paredit.vim - paréntesis y s-expressions
 " fugitive.vim - integración con git
 
 " Configuraciones extras de plugins
