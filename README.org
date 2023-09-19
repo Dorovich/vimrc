@@ -17,21 +17,21 @@ versiones más nuevas en =~/.vim/vimrc=.
 - jdhao/better-escape.vim
 - tpope/vim-surround
 - tpope/vim-commentary
-*opcional: fuzzy finding*
+*(opcional) búsqueda "fuzzy":*
 - junegunn/fzf
 - junegunn/fzf.vim
-*opcional: colores*
+*(opcional) colores:*
 - srcery-colors/srcery-vim
 - Everblush/everblush.vim
 - rose-pine/vim
 - ap/vim-css-color
-*opcional: experimental*
+*(opcional) experimental:*
 - justinmk/vim-sneak
-*opcional: org*
+*(opcional) lenguaje org:*
 - tpope/vim-speeddating
 - jceb/vim-orgmode
-*opcional: lisp*
+*(opcional) lenguajes lisp:*
 - vim-scripts/paredit.vim
 - vlime/vlime
-*opcional: glsl*
+*(opcional) lenguaje glsl:*
 - tikhomirov/vim-glsl

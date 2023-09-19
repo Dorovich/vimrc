@@ -7,8 +7,4 @@ set autoread
 set lazyredraw
 set clipboard=unnamedplus
 
-" nose si esto funcionara en todos los sistemas:
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
 " vi: ft=vim
