@@ -15,6 +15,7 @@ set makeprg=make\ -kj$(nproc)
 set mouse=ni
 set noswapfile
 set nowrap
+set showcmd
 set tabstop=8
 set title
 set undofile undodir=~/.vim/tmp/undo
@@ -27,9 +28,7 @@ filetype plugin indent on
 
 let g:mapleader = ','
 
-map <leader>p :r !xsel -o -b<cr>
 map <leader>r :%s//g<left><left>
-map <leader>y :w !xsel -i -b<cr><cr>
 map U <c-r>
 map ñ :
 nmap gb :buffers<cr>:b<space>
@@ -39,10 +38,14 @@ xmap ñ :
 
 command! SudoWrite w !sudo tee %
 
-call job_start("xset r rate 300 35")
+autocmd FileType c,cpp setlocal colorcolumn=80
 
 call plug#begin()
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 call plug#end()
+
+" map <leader>p :r !xsel -o -b<cr>
+" map <leader>y :w !xsel -i -b<cr><cr>
+" call job_start("xset r rate 300 35")
