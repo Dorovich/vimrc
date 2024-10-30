@@ -23,6 +23,8 @@ set viewoptions-=options viewdir=~/.vim/tmp/view
 set viminfo+=n~/.vim/.viminfo
 set wildmenu
 
+autocmd FileType c,cpp setlocal colorcolumn=80
+
 syntax enable
 filetype plugin indent on
 
@@ -38,7 +40,12 @@ xmap ñ :
 
 command! SudoWrite w !sudo tee %
 
-autocmd FileType c,cpp setlocal colorcolumn=80
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+	let source = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs '.source
+	autocmd VimEnter * PlugInstall --sync
+endif
 
 call plug#begin()
 Plug 'Raimondi/delimitMate'
