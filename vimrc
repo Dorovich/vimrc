@@ -41,6 +41,7 @@ command! SudoWrite w !sudo tee %
 autocmd FileType c,cpp setlocal colorcolumn=80
 
 call plug#begin()
+Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
