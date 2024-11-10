@@ -1,12 +1,14 @@
+set autochdir
 set autoindent
 set autoread
 set autowrite
+set background=dark
 set backspace=2
 set backupdir=~/.vim/tmp/backup
-set bg=dark
 set cindent
 set cinoptions+=l1,t0
 set clipboard=unnamedplus
+set encoding=utf-8
 set hidden
 set hlsearch incsearch
 set ignorecase smartcase
@@ -22,6 +24,7 @@ set undofile undodir=~/.vim/tmp/undo
 set viewoptions-=options viewdir=~/.vim/tmp/view
 set viminfo+=n~/.vim/.viminfo
 set wildmenu
+set wildoptions=pum
 
 autocmd FileType c,cpp setlocal colorcolumn=80
 
@@ -49,11 +52,8 @@ endif
 
 call plug#begin()
 Plug 'Raimondi/delimitMate'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 call plug#end()
-
-" map <leader>p :r !xsel -o -b<cr>
-" map <leader>y :w !xsel -i -b<cr><cr>
-" call job_start("xset r rate 300 35")
