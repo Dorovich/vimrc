@@ -17,6 +17,7 @@ set makeprg=make\ -kj$(nproc)
 set mouse=ni
 set noswapfile
 set nowrap
+set ruler
 set showcmd
 set tabstop=8
 set title
