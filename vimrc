@@ -20,6 +20,7 @@ set nowrap
 set ruler
 set showcmd
 set tabstop=8
+set termguicolors
 set title
 set undofile undodir=~/.vim/tmp/undo
 set viewoptions-=options viewdir=~/.vim/tmp/view
@@ -35,6 +36,7 @@ filetype plugin indent on
 let g:mapleader = ','
 
 map <leader>r :%s//g<left><left>
+map <leader>g :Git<cr>
 map U <c-r>
 map ñ :
 nmap gb :buffers<cr>:b<space>
@@ -54,7 +56,15 @@ endif
 call plug#begin()
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'srcery-colors/srcery-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 call plug#end()
+
+let g:srcery_bold = 1
+let g:srcery_italic = 1
+let g:srcery_bg = ['NONE', 'NONE']
+let g:srcery_inverse = 1
+
+colorscheme srcery
