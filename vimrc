@@ -1,3 +1,4 @@
+" set mouse=ni
 set autochdir
 set autoindent
 set autoread
@@ -14,11 +15,12 @@ set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
 set makeprg=make\ -kj$(nproc)
-set mouse=ni
 set noswapfile
 set nowrap
+set number
 set showcmd
 set tabstop=8
+set termguicolors
 set title
 set undofile undodir=~/.vim/tmp/undo
 set viewoptions-=options viewdir=~/.vim/tmp/view
@@ -34,6 +36,7 @@ filetype plugin indent on
 let g:mapleader = ','
 
 map <leader>r :%s//g<left><left>
+map <leader>g :Git<cr>
 map U <c-r>
 map ñ :
 nmap gb :buffers<cr>:b<space>
@@ -53,6 +56,7 @@ endif
 call plug#begin()
 Plug 'Raimondi/delimitMate'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'srcery-colors/srcery-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
