@@ -18,6 +18,7 @@ set makeprg=make\ -kj$(nproc)
 set noswapfile
 set nowrap
 set number
+set ruler
 set showcmd
 set tabstop=8
 set termguicolors
@@ -61,3 +62,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 call plug#end()
+
+let g:srcery_bold = 1
+let g:srcery_italic = 1
+let g:srcery_bg = ['NONE', 'NONE']
+let g:srcery_inverse = 1
+
+colorscheme srcery
