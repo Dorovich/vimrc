@@ -5,9 +5,7 @@ set autoread
 set autowrite
 set background=dark
 set backspace=2
-set backupdir=~/.vim/tmp/backup
-set cindent
-set cinoptions+=l1,t0
+set cindent cinoptions+=l1,t0
 set clipboard=unnamedplus
 set encoding=utf-8
 set hidden
@@ -19,15 +17,15 @@ set noswapfile
 set nowrap
 set number
 set ruler
+set shortmess+=I
 set showcmd
 set tabstop=8
 set termguicolors
 set title
 set undofile undodir=~/.vim/tmp/undo
 set viewoptions-=options viewdir=~/.vim/tmp/view
-set viminfo+=n~/.vim/.viminfo
-set wildmenu
-set wildoptions=pum
+set viminfofile=~/.vim/tmp/viminfo
+set wildmenu wildoptions=pum
 
 autocmd FileType c,cpp setlocal colorcolumn=80
 
