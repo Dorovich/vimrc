@@ -1,11 +1,10 @@
-" set mouse=ni
 set autochdir
 set autoindent
 set autoread
 set autowrite
 set background=dark
 set backspace=2
-set cindent cinoptions+=l1,t0
+set cindent cinoptions+=:0,l1,t0
 set clipboard=unnamedplus
 set encoding=utf-8
 set hidden
@@ -13,6 +12,7 @@ set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
 set makeprg=make\ -kj$(nproc)
+set mouse=ni
 set noswapfile
 set nowrap
 set number
@@ -34,10 +34,11 @@ filetype plugin indent on
 
 let g:mapleader = ','
 
-map <leader>r :%s//g<left><left>
-map <leader>g :Git<cr>
-map U <c-r>
-map ñ :
+nmap <silent> <leader>e :cwindow<cr>
+nmap <leader>r :%s//g<left><left>
+nmap <silent> <leader>g :Git<cr>
+nmap U <c-r>
+nmap ñ :
 nmap gb :buffers<cr>:b<space>
 xmap < <gv
 xmap > >gv
