@@ -11,13 +11,14 @@ set hidden
 set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
-set makeprg=make\ -kj$(nproc)
+set makeprg=make\ -j$(nproc)
 set mouse=ni
 set noswapfile
 set nowrap
 set number
+set pumheight=20
 set ruler
-set shortmess+=I
+set shortmess=atTIO
 set showcmd
 set tabstop=8
 set termguicolors
