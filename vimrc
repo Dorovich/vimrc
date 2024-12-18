@@ -11,6 +11,7 @@ set hidden
 set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
+set linebreak
 set makeprg=make\ -j$(nproc)
 set mouse=ni
 set noswapfile
@@ -23,9 +24,9 @@ set showcmd
 set tabstop=8
 set termguicolors
 set title
-set undofile undodir=~/.vim/tmp/undo
-set viewoptions-=options viewdir=~/.vim/tmp/view
-set viminfofile=~/.vim/tmp/viminfo
+set undofile undodir=~/.config/vim/tmp/undo
+set viewoptions-=options viewdir=~/.config/vim/tmp/view
+set viminfofile=~/.config/vim/tmp/viminfo
 set wildmenu wildoptions=pum
 
 autocmd FileType c,cpp setlocal colorcolumn=80
@@ -47,7 +48,7 @@ xmap ñ :
 
 command! SudoWrite w !sudo tee %
 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.config/vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
 	let source = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs '.source
