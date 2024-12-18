@@ -48,22 +48,6 @@ xmap ñ :
 
 command! SudoWrite w !sudo tee %
 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.config/vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-	let source = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs '.source
-	autocmd VimEnter * PlugInstall --sync
-endif
-
-call plug#begin()
-Plug 'Raimondi/delimitMate'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'srcery-colors/srcery-vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-call plug#end()
-
 let g:srcery_bold = 1
 let g:srcery_italic = 1
 let g:srcery_bg = ['NONE', 'NONE']
