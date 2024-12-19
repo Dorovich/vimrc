@@ -3,6 +3,8 @@
 mkdir -p pack
 cd pack
 
+git submodule update --init
+
 git submodule add https://github.com/Raimondi/delimitMate plugins/start/delimitMate
 git submodule add https://github.com/ctrlpvim/ctrlp.vim plugins/start/ctrlp.vim
 git submodule add https://github.com/srcery-colors/srcery-vim colors/start/srcery-vim
@@ -10,5 +12,4 @@ git submodule add https://github.com/tpope/vim-commentary plugins/start/vim-comm
 git submodule add https://github.com/tpope/vim-fugitive plugins/start/vim-fugitive
 git submodule add https://github.com/tpope/vim-surround plugins/start/vim-surround
 
-git submodule update --init
 git submodule update --remote --merge
