@@ -30,6 +30,7 @@ set viminfofile=~/.config/vim/tmp/viminfo
 set wildmenu wildoptions=pum
 
 autocmd FileType c,cpp setlocal colorcolumn=80
+autocmd FileType text,markdown setlocal wrap nonumber
 
 syntax enable
 filetype plugin indent on

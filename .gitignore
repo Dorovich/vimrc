@@ -1,6 +1,5 @@
 .netrwhist
 .viminfo
 autoload/
-pack/
 plugged/
 tmp/
