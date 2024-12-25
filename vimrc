@@ -34,8 +34,8 @@ xmap ñ :
 
 command! Rootw w !sudo tee %
 
-autocmd FileType c,cpp setlocal colorcolumn=80
+autocmd FileType c,cpp,cs setlocal colorcolumn=80
 autocmd FileType text,markdown setlocal wrap nonumber
 
-syntax enable
+syntax on
 filetype plugin indent on
