@@ -34,12 +34,8 @@ xmap ñ :
 
 command! Rootw w !sudo tee %
 
-autocmd FileType c,cpp,cs setlocal colorcolumn=80
-autocmd FileType cs setlocal tabstop=4 shiftwidth=4
-autocmd FileType text,markdown setlocal wrap nonumber
-
 syntax on
 filetype plugin indent on
 
 colorscheme torte
-hi Normal guibg=NONE ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
