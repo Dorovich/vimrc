@@ -27,15 +27,17 @@ set viewoptions-=options viewdir=~/.config/vim/tmp/view
 set viminfofile=~/.config/vim/tmp/viminfo
 set wildmenu wildoptions=fuzzy pumheight=10
 
-nmap U <c-r>
-nmap ñ :
 nmap gb :buffers<cr>:b
+nmap ñ :
+nmap <silent> <esc><esc> :nohl<cr>
+nmap U <c-r>
 xmap ñ :
 
 command! Rootw w !sudo tee %
 
-syntax on
+syntax off
 filetype plugin indent on
 
-colorscheme torte
+colorscheme fogbell
 highlight Normal guibg=NONE ctermbg=NONE
+"highlight LineNr guibg=NONE ctermbg=NONE
