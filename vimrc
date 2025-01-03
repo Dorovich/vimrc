@@ -35,7 +35,7 @@ xmap ñ :
 
 command! Rootw w !sudo tee %
 
-syntax off
+syntax on
 filetype plugin indent on
 
 colorscheme fogbell
