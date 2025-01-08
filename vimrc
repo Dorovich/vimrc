@@ -10,9 +10,10 @@ set hidden
 set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
-set linebreak
+set linebreak showbreak=↪
 set makeprg=make\ -j$(nproc)
 set mouse=ni
+set nojoinspaces
 set noswapfile
 set nowrap
 set number
