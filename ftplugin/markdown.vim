@@ -1,3 +1,5 @@
+setlocal makeprg=pandoc\ -s\ %\ -o\ %:r.pdf
+setlocal noexpandtab
 setlocal nonumber
 setlocal wrap
-setlocal makeprg=pandoc\ -s\ %\ -o\ %:r.pdf
+xmap <c-t> :!tr -s " " \| column -t -s '\|' -o '\|'<cr>
