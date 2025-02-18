@@ -39,5 +39,4 @@ command! Rootw w !sudo tee %
 syntax on
 filetype plugin indent on
 
-colorscheme fogbell
-highlight Normal guibg=NONE ctermbg=NONE
+colorscheme moth
