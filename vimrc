@@ -10,7 +10,7 @@ set hlsearch incsearch
 set ignorecase smartcase
 set lazyredraw
 set makeprg=make\ -j$(nproc)
-set mouse=ni
+set mouse=v
 set nojoinspaces
 set noswapfile
 set nowrap linebreak showbreak=↪\ 
