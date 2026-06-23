@@ -1,22 +1,29 @@
-set autochdir autoindent autoread autowrite background=dark backspace=2 cinoptions+=:0,l1,g0,t0 clipboard=unnamedplus encoding=utf-8 hidden hlsearch incsearch ignorecase smartcase lazyredraw linebreak showbreak=…\  makeprg=make\ -j$(nproc) mouse=ni nojoinspaces noswapfile nowrap number numberwidth=6 pastetoggle=<f2> ruler shortmess=atTIO showcmd tabstop=8 shiftwidth=0 termguicolors title undofile undodir=/tmp wildmenu wildoptions=fuzzy pumheight=10
+set autochdir autoindent autoread autowrite cinoptions+=:0,l1,g0,t0 clipboard=unnamedplus encoding=utf-8 hidden hlsearch incsearch ignorecase smartcase lazyredraw linebreak mouse=ni nojoinspaces noswapfile number pastetoggle=<f2> termguicolors title undofile undodir=/tmp wildmenu wildoptions=fuzzy pumheight=5
+
+" Unneeded because of vim-9.2:
+" backspace=2 ruler showcmd
+" Unneeded because of defaults:
+" tabstop=8 shiftwidth=0
 
 syntax on
 filetype plugin indent on
 
 cm W! w !sudo tee % >/dev/null
 nm <m-b> :ls<cr>:b
-nm <silent> <esc><esc> :nohl<cr>
+nn <c-l> :nohl<cr><c-l>
 nm U <c-r>
 nm ñ :
 xm ñ :
+nm <silent> <f5> :make<cr>
 
-colo busybee " moth basic badwolf busybee busierbee buddy
+" moth basic badwolf busybee busierbee buddy benlight void
+colo void
 
-aug file_exts
+aug file_extensions
 	au!
-	au BufEnter,BufNew *.c,*.h,*.cc,*.hh,*.cpp,*.cs setl cin
+	au BufEnter,BufNew *.c,*.h,*.cc,*.hh,*.cpp,*.cs setl cin mp=make\ -j$(nproc)
 	au BufEnter,BufNew *.cs,*.html,*.tex setl ts=4 sw=4
-	au BufEnter,BufNew *.txt,*.md,*.org,*.tex setl nonu wrap
+	au BufEnter,BufNew *.txt,*.md,*.org,*.tex setl nonu
 aug END
 
 aug file_types
@@ -26,4 +33,7 @@ aug file_types
 	au FileType markdown setl mp=pandoc\ -s\ %\ -o\ %:r.pdf
 	au FileType markdown xm <c-t> :!tr -s " " \| column -t -s '\|' -o '\|'<cr>
 	au FileType tex setl mp=pdflatex\ %
+	au FileType tex xm <c-t> :!tr -s " " \| column -t -s '&' -o '&'<cr>
 aug END
+
+pa! comment
