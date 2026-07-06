@@ -30,9 +30,9 @@ aug file_types
 	au!
 	au FileType help,man map <silent> <buffer> q <c-w>q
 	au FileType man setl noma nolist nonu nomod
-	au FileType markdown setl mp=pandoc\ -s\ %\ -o\ %:r.pdf
+	au FileType markdown setl mp=pandoc\ -t\ pdf\ -s\ %:S
 	au FileType markdown xm <c-t> :!tr -s " " \| column -t -s '\|' -o '\|'<cr>
-	au FileType tex setl mp=pdflatex\ %
+	au FileType tex setl mp=pdflatex\ %:S
 	au FileType tex xm <c-t> :!tr -s " " \| column -t -s '&' -o '&'<cr>
 aug END
 
